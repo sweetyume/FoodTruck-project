@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="home_html">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,32 +11,87 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300i,400,700" rel="stylesheet">
 
   <!-- stylesheets  -->
-  <link rel="stylesheet" href="../stylesheets/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+  <link rel="stylesheet" href="../stylesheets/styles.css">
 </head>
+
 <body>
 
-  <!-- NAVIGATION -->
-  <nav></nav>
-
   <!-- HEADER -->
-  <header></header>
+  <header>
+    <div class="row">
+        <div class="home_header_background">
 
-  <!-- MENU / LA CARTE -->
-  <section></section>
+          <video preload="true" autoplay="autoplay" loop="loop" muted="true">
+            <source src="../videos/food_truck.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
 
-  <!-- L'EQUIPE / STORY -->
-  <section></section>
+          <!-- NAVIGATION -->
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- LOGO -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#home_nav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                <a class="navbar-brand" href="index.html"><img class="nav_logo" src="../images/logo.png" alt="Logo"></a>
+              </div>
+              <div class="collapse navbar-collapse" id="home_nav">
+                <ul class="nav navbar-nav navbar-left">
+                  <li><a href="carte.html">La Carte</a></li>
+                  <li><a href="team.html">Notre histoire</a></li>
+                  <li><a href="contact.html">Nous trouver</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- END NAVIGATION -->
 
-  <!-- CONTACTS -->
-  <section></section>
+          <div class="home_header_logo">
+            <img src="../images/logo-white.png" alt="Logo blanc" class="responsive">
+          </div>
+          <div class="home_paragraphe">
+            <p>Le Kebab comme vous ne l'avez jamais vu</p>
+          </div>
 
+          <!-- CERTIFICATIONS -->
+          <div id="home_certifications">
+            <div class="container">
+
+              <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                  <img class="home_label" src="../images/vegan-tr.gif" alt="Label Vegan" class="responsive">
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <img class="home_label" class="home_img_ab" src="../images/AB-tr.png" alt="Label AB" class="responsive">
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <img class="home_label" src="../images/fait-maison-tr.png" alt="Label Fait Maison" class="responsive">
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <img class="home_label" src="../images/frais-tr.png" alt="Label frais" class="responsive">
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                  <img class="home_label" src="../images/fabrique-fr-tr.gif" alt="Label Fabriqué en France" class="responsive">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+  </header>
+  <!-- END HEADER -->
 
 
 
   <!-- SCRIPTS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
+
 </html>

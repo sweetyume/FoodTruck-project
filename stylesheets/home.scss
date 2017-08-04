@@ -1,0 +1,214 @@
+////////// Variables //////////
+
+/// Colors:
+$color-black: #000;
+$color-white: #FFF;
+$color-mustard: #ffbe2e;
+
+/// Fonts:
+$font-amatica: 'Amatica SC';
+$font-josefin: 'Josefin Sans';
+
+
+////////// NAVBAR //////////
+.home_html {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: $color-white;
+  border-bottom: 2px solid $color-black;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  border-radius: 0;
+
+  .container-fluid {
+    margin-left: 10px;
+  }
+
+  // .container {
+  //   width: 75%;
+  //   @media only screen and (max-width: 767px) {
+  //     margin-left: 35px;
+  //   }
+  // }
+
+  .navbar-header {
+    .navbar-toggle {
+      float: left;
+      background-color: $color-white;
+      margin-left: 15px;
+    }
+  }
+
+  .navbar-brand {
+    padding-top: 2px;
+    // left: 49%;
+    // display: block;
+    @media only screen and (max-width: 767px) {
+      position: absolute;
+      left: 46%;
+    }
+
+    .nav_logo {
+      width: 45px;
+    }
+  }
+  nav {
+    background-color: white;
+  }
+  .navbar-nav {
+    padding-left: 50px;
+
+
+    li {
+      text-align: center;
+      background-color: $color-white;
+      padding-top: 5px;
+      padding-left: 35px;
+      padding-right: 35px;
+      @media only screen and (max-width: 1200px) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      @media only screen and (max-width: 1000px) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      @media only screen and (max-width: 767px) {
+        z-index: 1;
+        border-bottom: 1px solid #A6A6A6;
+      }
+
+      a {
+        color: $color-black;
+        background-color: $color-white;
+        text-transform: uppercase;
+        font-family: $font-amatica, sans-serif;
+        font-size: 26px;
+        font-weight: bold;
+        margin-top: 9px;
+        padding-top: 7px;
+        padding-bottom: 10px;
+        @media only screen and (max-width: 1100px) {
+          font-size: 20px;
+        }
+
+        &:hover {
+          color: $color-mustard;
+          border-top: 1px solid $color-mustard;
+          border-bottom: 1px solid $color-mustard;
+          background-color: $color-white;
+        }
+      }
+    }
+  }
+
+}//.navbar
+
+////////// HEADER //////////
+header {
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  .home_header_background {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    height: 100%;
+    position: relative;
+    @media only screen and (max-width: 1023px) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/header.jpg");
+      background-color: $color-black;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    video {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: -2;
+      background-size: cover;
+      @media only screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    .home_header_logo {
+      img {
+        width: 180px;
+        opacity: 0.9;
+        @media only screen and (max-width: 1280px) {
+          width: 150px;
+        }
+        @media only screen and (max-width: 980px) {
+          width: 120px;
+        }
+        @media only screen and (max-width: 550px) {
+          width: 20%;
+        }
+      }
+      margin-top: 11%;
+      text-align: center;
+      z-index: -1;
+      @media only screen and (max-width: 500px) {
+        margin-top: 30%;
+      }
+    }
+    .home_paragraphe {
+      text-align: center;
+      p {
+        color: $color-mustard;
+        font-family: $font-amatica;
+        font-weight: bold;
+        font-size: 32px;
+        text-align: center;
+        margin-top: 30px;
+        @media only screen and (max-width: 500px) {
+          margin-top: 30px;
+        }
+        @media only screen and (max-width: 1100px) {
+          font-size: 25px;
+        }
+        @media only screen and (max-width: 800px) {
+          font-size: 20px;
+        }
+        @media only screen and (max-width: 500px) {
+          font-size: 15px;
+        }
+        @media only screen and (max-width: 320px) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+////////// CERTIFICATIONS //////////
+#home_certifications {
+  padding: 40px 0;
+  .row {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    .home_label {
+      width: 100px;
+      opacity: 0.8;
+      @media only screen and (max-width: 1200px) {
+        width: 70px;
+      }
+      @media only screen and (max-width: 767px) {
+        width: 50px;
+      }
+      @media only screen and (max-width: 500px) {
+        width: 35px;
+      }
+      @media only screen and (max-width: 320px) {
+        width: 25px;
+      }
+    }
+  }
+}
