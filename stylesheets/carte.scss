@@ -3,9 +3,7 @@ $font-family-josefin: 'Josefin Sans', Helvetica, sans-serif;
 $color-mustard: #ffec45;
 $font-size-carte: 20px;
 
-
-
- #carte {
+#carte {
   font-family: $font-family-amatica;
   display: flex;
   flex-direction: column;
@@ -28,11 +26,16 @@ $font-size-carte: 20px;
   font-size: 3em;
   margin-bottom: 30px;
   margin-left: 10px;
-
+  text-align: center;
+  @media only screen and (min-width: 768px) {
+    // For desktop
+    text-align: center;
+  }
 }
-.carte_part_name {
-font-weight: bold;
-font-size: 30px;
+
+.carte_part_name h3 {
+  font-weight: bolder;
+  font-size: 30px;
 }
 
 .carte_part_details li {
@@ -42,9 +45,12 @@ font-size: 30px;
 .circle_img {
   width: 200px;
   height: 200px;
+  vertical-align: middle;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
   border-radius: 100px;
+  object-fit: cover;
+
 }
 
 .carte_texte {
@@ -57,16 +63,36 @@ font-size: 30px;
   font-family: $font-family-amatica;
   font-size: $font-size-carte;
   font-weight: bold !important;
+  @media only screen and (min-width: 768px) {
+    // For desktop
+    text-align: center;
+    margin: 0 auto;
 
+  }
+}
+.carte_texte_formule2 {
+  font-family: $font-family-amatica;
+  font-size: $font-size-carte;
+  font-weight: bold !important;
+  @media only screen and (min-width: 768px) {
+    // For desktop
+    text-align: center;
+    margin: 0 auto;
+    text-rendering: optimizeLegibility;
+    font-size: 20px;
 
+  }
+}
+
+.carte_formule_details {
+  display: flex;
+  flex-direction: column;
 }
 
 .formule {
-
   margin-bottom: 40px !important;
   padding: 30px;
   margin: 0 auto;
-
 }
 
 .bg_white {
@@ -76,11 +102,25 @@ font-size: 30px;
   align-items: center;
   background: rgba(#f5f4ce, 0.63);
   max-width: 80%;
+  @media only screen and (min-width: 768px) {
+    // For desktop
+    display: flex;
+    max-height: 300px;
+    min-width: 300px;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin: 0 auto;
+  }
 }
 
 .shadow_solid.red {
   box-shadow: 13px 13px 0 #bb342d;
 }
+
 .shadow_solid.green {
   box-shadow: 13px 13px 0 #94E8B4;
 }
@@ -92,28 +132,13 @@ font-size: 30px;
 .color_red {
   color: #bb342d;
 }
+
 .prix {
   font-size: 30px;
   font-weight: bold;
+  padding: 20px;
 }
-//
-// .carte h1 {
-//   color: #fff;
-//   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
-// }
-//
-// .carte_left-half {
-//   background-color: #fff500;
-//   background-image: image('images/header.jpg');
-//   flex: 1;
-//   padding: 15%;
-// }
-//
-// .carte_right-half {
-//   background-image: url(images/locations.jpg);
-//   background-position: center;
-//   background-size: cover;
-//   background-attachment: fixed;
-//   flex: 1;
-//   padding: 15%;
-// }
+
+.col-md-1 {
+  padding: 20px;
+}

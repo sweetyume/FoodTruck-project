@@ -18,10 +18,14 @@
 .carte_title {
   font-size: 3em;
   margin-bottom: 30px;
-  margin-left: 10px; }
+  margin-left: 10px;
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .carte_title {
+      text-align: center; } }
 
-.carte_part_name {
-  font-weight: bold;
+.carte_part_name h3 {
+  font-weight: bolder;
   font-size: 30px; }
 
 .carte_part_details li {
@@ -30,9 +34,11 @@
 .circle_img {
   width: 200px;
   height: 200px;
+  vertical-align: middle;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
-  border-radius: 100px; }
+  border-radius: 100px;
+  object-fit: cover; }
 
 .carte_texte {
   font-size: 20px;
@@ -43,6 +49,25 @@
   font-family: "Amatica SC", Helvetica, sans-serif;
   font-size: 20px;
   font-weight: bold !important; }
+  @media only screen and (min-width: 768px) {
+    .carte_texte_formule {
+      text-align: center;
+      margin: 0 auto; } }
+
+.carte_texte_formule2 {
+  font-family: "Amatica SC", Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold !important; }
+  @media only screen and (min-width: 768px) {
+    .carte_texte_formule2 {
+      text-align: center;
+      margin: 0 auto;
+      text-rendering: optimizeLegibility;
+      font-size: 20px; } }
+
+.carte_formule_details {
+  display: flex;
+  flex-direction: column; }
 
 .formule {
   margin-bottom: 40px !important;
@@ -56,6 +81,18 @@
   align-items: center;
   background: rgba(245, 244, 206, 0.63);
   max-width: 80%; }
+  @media only screen and (min-width: 768px) {
+    .bg_white {
+      display: flex;
+      max-height: 300px;
+      min-width: 300px;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+      margin: 0 auto; } }
 
 .shadow_solid.red {
   box-shadow: 13px 13px 0 #bb342d; }
@@ -71,6 +108,10 @@
 
 .prix {
   font-size: 30px;
-  font-weight: bold; }
+  font-weight: bold;
+  padding: 20px; }
+
+.col-md-1 {
+  padding: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
