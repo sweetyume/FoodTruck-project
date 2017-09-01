@@ -4,6 +4,7 @@
 $color-black: #000;
 $color-white: #FFF;
 $color-mustard: #ffbe2e;
+$color-green-shadow: #94E8B4;
 
 /// Fonts:
 $font-amatica: 'Amatica SC';
@@ -30,7 +31,7 @@ $font-josefin: 'Josefin Sans';
 
   // .container {
   //   width: 75%;
-  //   @media only screen and (max-width: 767px) {
+  //   @media all and (max-width: 767px) {
   //     margin-left: 35px;
   //   }
   // }
@@ -47,7 +48,7 @@ $font-josefin: 'Josefin Sans';
     padding-top: 2px;
     // left: 49%;
     // display: block;
-    @media only screen and (max-width: 767px) {
+    @media all and (max-width: 767px) {
       position: absolute;
       left: 46%;
     }
@@ -56,12 +57,10 @@ $font-josefin: 'Josefin Sans';
       width: 45px;
     }
   }
-  nav {
-    background-color: white;
-  }
-  .navbar-nav {
-    padding-left: 50px;
 
+  .navbar-nav {
+    padding-left: 15%;
+    background-color: $color-white;
 
     li {
       text-align: center;
@@ -69,15 +68,15 @@ $font-josefin: 'Josefin Sans';
       padding-top: 5px;
       padding-left: 35px;
       padding-right: 35px;
-      @media only screen and (max-width: 1200px) {
+      @media all and (max-width: 1200px) {
         padding-left: 30px;
         padding-right: 30px;
       }
-      @media only screen and (max-width: 1000px) {
+      @media all and (max-width: 1000px) {
         padding-left: 10px;
         padding-right: 10px;
       }
-      @media only screen and (max-width: 767px) {
+      @media all and (max-width: 767px) {
         z-index: 1;
         border-bottom: 1px solid #A6A6A6;
       }
@@ -92,7 +91,7 @@ $font-josefin: 'Josefin Sans';
         margin-top: 9px;
         padding-top: 7px;
         padding-bottom: 10px;
-        @media only screen and (max-width: 1100px) {
+        @media all and (max-width: 1100px) {
           font-size: 20px;
         }
 
@@ -115,9 +114,8 @@ header {
 
   .home_header_background {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-    height: 100%;
     position: relative;
-    @media only screen and (max-width: 1023px) {
+    @media all and (max-width: 1023px) {
       background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/header.jpg");
       background-color: $color-black;
       background-repeat: no-repeat;
@@ -126,12 +124,11 @@ header {
     }
 
     video {
-      height: 100%;
       width: 100%;
       position: absolute;
+      object-fit: cover;
       z-index: -2;
-      background-size: cover;
-      @media only screen and (max-width: 1023px) {
+      @media all and (max-width: 1023px) {
         display: none;
       }
     }
@@ -140,20 +137,20 @@ header {
       img {
         width: 180px;
         opacity: 0.9;
-        @media only screen and (max-width: 1280px) {
+        @media all and (max-width: 1280px) {
           width: 150px;
         }
-        @media only screen and (max-width: 980px) {
+        @media all and (max-width: 980px) {
           width: 120px;
         }
-        @media only screen and (max-width: 550px) {
+        @media all and (max-width: 550px) {
           width: 20%;
         }
       }
-      margin-top: 11%;
+      margin-top: 10%;
       text-align: center;
       z-index: -1;
-      @media only screen and (max-width: 500px) {
+      @media all and (max-width: 500px) {
         margin-top: 30%;
       }
     }
@@ -166,19 +163,19 @@ header {
         font-size: 32px;
         text-align: center;
         margin-top: 30px;
-        @media only screen and (max-width: 500px) {
+        @media all and (max-width: 500px) {
           margin-top: 30px;
         }
-        @media only screen and (max-width: 1100px) {
+        @media all and (max-width: 1100px) {
           font-size: 25px;
         }
-        @media only screen and (max-width: 800px) {
+        @media all and (max-width: 800px) {
           font-size: 20px;
         }
-        @media only screen and (max-width: 500px) {
+        @media all and (max-width: 500px) {
           font-size: 15px;
         }
-        @media only screen and (max-width: 320px) {
+        @media all and (max-width: 320px) {
           font-size: 10px;
         }
       }
@@ -186,9 +183,8 @@ header {
   }
 }
 
-////////// CERTIFICATIONS //////////
-#home_certifications {
-  padding: 40px 0;
+.home_certifications {
+  padding: 30px 0;
   .row {
     display: flex;
     align-items: center;
@@ -197,18 +193,155 @@ header {
     .home_label {
       width: 100px;
       opacity: 0.8;
-      @media only screen and (max-width: 1200px) {
+      @media all and (max-width: 1200px) {
         width: 70px;
       }
-      @media only screen and (max-width: 767px) {
+      @media all and (max-width: 767px) {
         width: 50px;
       }
-      @media only screen and (max-width: 500px) {
+      @media all and (max-width: 500px) {
         width: 35px;
       }
-      @media only screen and (max-width: 320px) {
+      @media all and (max-width: 430px) {
         width: 25px;
       }
     }
   }
+}
+
+////////// SECTION IDEES RECUES //////////
+.idee_recue {
+  text-align: center;
+  font-family: $font-amatica;
+  padding: 70px 0;
+
+  .idee_recue_title {
+    font-weight: bolder;
+    font-size: 35px;
+    @media all and (max-width: 500px) {
+      font-size: 30px;
+    }
+    @media all and (max-width: 320px) {
+      font-size: 25px;
+    }
+  }
+  .idee_recue_hr {
+    border: 1px solid $color-green-shadow;
+    width: 500px;
+    margin-bottom: 40px;
+  }
+  .idee_recue_box {
+    background-color: rgba(#f5f4ce, 0.63);
+    box-shadow: 13px 13px 0 $color-green-shadow;
+    margin: 25px 15px;
+    padding: 7px 25px;
+    height: 160px;
+  }
+  .idee_recue_num {
+    font-family: $font-josefin;
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 2px 2px 0 $color-green-shadow;
+    margin-bottom: 5px;
+  }
+  .idee_recue_text {
+    font-size: 24px;
+    font-weight: bold;
+    @media all and (max-width: 500px) {
+      font-size: 21px;
+    }
+    @media all and (max-width: 320px) {
+      font-size: 18px;
+    }
+  }
+}
+
+////////// SECTION REDECOUVREZ LE KEBAB //////////
+.discover_menu {
+  padding-bottom: 70px;
+  font-family: $font-amatica;
+}
+
+.discover_menu_text {
+  margin-bottom: 60px;
+  font-weight: bold;
+  font-size: 35px;
+  @media all and (max-width: 500px) {
+    font-size: 25px;
+  }
+}
+
+.home_menu_image_container {
+  position: relative;
+  width: 400px;
+  @media all and (max-width: 500px) {
+    width: 300px;
+  }
+}
+
+.home_menu_image {
+  width: 400px;
+  box-shadow: 3px 3px 3px #777;
+  &:hover {
+    box-shadow: 9px 9px 10px #777;
+  }
+}
+
+.home_menu_image_legend {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: $color-mustard;
+  text-shadow: 2px 2px 0 $color-black;
+  font-size: 40px;
+  @media all and (max-width: 500px) {
+    font-size: 30px;
+  }
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  &:hover {
+    font-size: 80px;
+    line-height: 250px;
+    height: 100%;
+    transition: 0.4s;
+  }
+}
+
+////////// FOOTER //////////
+.footer_icons {
+  li {
+    display: inline;
+    float: right;
+    padding: 2px 20px;
+  }
+  a {
+    color: $color-white;
+    opacity: 0.7;
+  }
+
+  .twitter:hover {
+    color: #55acee;
+    transition: 0.2s;
+  }
+
+  .facebook:hover {
+    color: #3b5998;
+    transition: 0.2s;
+  }
+
+  .youtube:hover {
+    color: #bb0000;
+    transition: 0.2s;
+  }
+}
+
+footer {
+  color: $color-white;
+  background-color: #2D2D2D;
+  padding: 10px 0;
+}
+
+.copyright {
+  margin-top: 7px;
 }
